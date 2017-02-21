@@ -1,6 +1,10 @@
 require 'sinatra'
 require 'json'
 
+before do
+  headers 'Access-Control-Allow-Origin' => '*'
+end
+
 items = []
 
 get '/items' do
